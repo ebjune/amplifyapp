@@ -15,10 +15,10 @@ const Home = () => {
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
                     <h1>We now have Auth!</h1>
+                    <h2>Welcome, {user.username}!</h2>
+                    <button onClick={signOut}>Sign Out</button>
                 </header>
             </div>
-            <h2>Welcome, {user.username}!</h2>
-            <button onClick={signOut}>Sign Out</button>
         </>
     );
 };
@@ -43,7 +43,7 @@ function App() {
 export default function AppWithProvider() {
     return (
         <Authenticator.Provider>
-            <App></App>
+            <App/>
         </Authenticator.Provider>
     );
 }
